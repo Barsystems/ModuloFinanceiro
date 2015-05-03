@@ -19,11 +19,15 @@ public class Class_Conexao_Banco {
 
         try {
 
+        	String url ="";
+        	String user ="";
+        	String pass ="";
+
             // Carregando o JDBC Driver padrão
             Class.forName("com.mysql.jdbc.Driver");
 
             //Configurando a nossa conexão com um banco de dados
-            connection = DriverManager.getConnection("url", "user", "pass");
+            connection = DriverManager.getConnection(url, user, pass);
 
             //Testa sua conexão
             if (connection != null) {
